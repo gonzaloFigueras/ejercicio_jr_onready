@@ -10,6 +10,7 @@ public class Concesionaria implements Interfaz {
     
     public void listar() {
         
+                     
         Auto coche = new Auto();
         Auto coche1 = new Auto();
         Moto moto = new Moto();
@@ -82,7 +83,7 @@ public class Concesionaria implements Interfaz {
             
         for (int i = 1; i < vehiculos.size(); i++) {
             if (vehiculos.get(i).getMarca().contains("Y")) {
-                System.out.println("Vehículo que contiene en el modelo la letra ‘Y’: " + vehiculos.get(i));
+                System.out.println("Vehículo que contiene en el modelo la letra ‘Y’: " + vehiculos.get(i).getMarca() + " " + vehiculos.get(i).getModelo() + " " +  vehiculos.get(i).getPrecio());
             }
         }
     }

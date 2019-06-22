@@ -105,15 +105,6 @@ public class Concesionaria implements Interfaz {
         }
         
     }
-    
-    public void textoANumero(){
-    
-        String patron = " $ ###.###,## ";
-        double valor = 200000.00;
-        
-        DecimalFormat miFormato = new DecimalFormat(patron);
-        String output = miFormato.format(valor);
-        System.out.println(valor + " " + patron + " " + output);
-    }
+
     
 }

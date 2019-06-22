@@ -82,7 +82,7 @@ public class Concesionaria implements Interfaz {
     public void mostrarConY() {
             
         for (int i = 1; i < vehiculos.size(); i++) {
-            if (vehiculos.get(i).getMarca().contains("Y")) {
+            if (vehiculos.get(i).getModelo().contains("Y")) {
                 System.out.println("Vehículo que contiene en el modelo la letra ‘Y’: " + vehiculos.get(i).getMarca() + " " + vehiculos.get(i).getModelo() + " " +  vehiculos.get(i).getPrecio());
             }
         }

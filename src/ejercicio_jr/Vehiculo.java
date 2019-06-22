@@ -1,6 +1,8 @@
 package ejercicio_jr;
 
 public abstract class Vehiculo implements Comparable<Vehiculo> {
+    
+   
 
     @Override
     public String toString() {
@@ -9,7 +11,7 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
 
     private String marca;
     private String modelo;
-    private float precio;
+    private Double precio;
 
     public String getMarca() {
         return marca;
@@ -27,11 +29,11 @@ public abstract class Vehiculo implements Comparable<Vehiculo> {
         this.modelo = modelo;
     }
 
-    public float getPrecio() {
+    public Double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(float precio) {
+    public void setPrecio(Double precio) {
         this.precio = precio;
     }
 

@@ -50,7 +50,7 @@ public class Concesionaria implements Interfaz {
         DecimalFormat formateo = new DecimalFormat(patron);
         for (i=0; i<vehiculos.size(); i++){
             String precioAMostrar = formateo.format(vehiculos.get(i).getPrecio());
-            System.out.println (vehiculos.get(i).toString() + " // Precio: " + precioAMostrar);
+            System.out.println (vehiculos.get(i).toString() + "Precio: " + precioAMostrar);
 }
         
     }
@@ -66,7 +66,7 @@ public class Concesionaria implements Interfaz {
                 mayorPrecio = vehiculos.get(i);
             }
         }
-        System.out.println("Vehículo mas caro : " + mayorPrecio.getMarca() + " " + mayorPrecio.getModelo());
+        System.out.println("Vehículo más caro : " + mayorPrecio.getMarca() + " " + mayorPrecio.getModelo());
     }
     
     public void mostrarMasBarato() {

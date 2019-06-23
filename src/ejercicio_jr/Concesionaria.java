@@ -46,13 +46,12 @@ public class Concesionaria implements Interfaz {
     public void mostrar() {
         
        int i;
-        String patron = " $ ###,###,###.00";
+        String patron = " $###,###,###.00";
         DecimalFormat formateo = new DecimalFormat(patron);
         for (i=0; i<vehiculos.size(); i++){
             String precioAMostrar = formateo.format(vehiculos.get(i).getPrecio());
-            System.out.println (vehiculos.get(i).toString() + "Precio: " + precioAMostrar);
-}
-        
+            System.out.println (vehiculos.get(i).toString() + "Precio:" + precioAMostrar);
+            }
     }
     
     public void mostratMasCaro() {
@@ -66,7 +65,7 @@ public class Concesionaria implements Interfaz {
                 mayorPrecio = vehiculos.get(i);
             }
         }
-        System.out.println("Vehículo más caro : " + mayorPrecio.getMarca() + " " + mayorPrecio.getModelo());
+        System.out.println("Vehículo más caro: " + mayorPrecio.getMarca() + " " + mayorPrecio.getModelo());
     }
     
     public void mostrarMasBarato() {
@@ -80,12 +79,12 @@ public class Concesionaria implements Interfaz {
                 menorPrecio = vehiculos.get(i);
             }
         }
-        System.out.println("Vehículo más barato : " + menorPrecio.getMarca() + " " + menorPrecio.getModelo());
+        System.out.println("Vehículo más barato: " + menorPrecio.getMarca() + " " + menorPrecio.getModelo());
     }
     
     public void mostrarConY() {
         
-        String patron = " $ ###,###,###.00";
+        String patron = " $###,###,###.00";
         DecimalFormat formateo = new DecimalFormat(patron);
             
         for (int i = 1; i < vehiculos.size(); i++) {
@@ -104,7 +103,5 @@ public class Concesionaria implements Interfaz {
             System.out.println(vehiculos.get(i).getMarca() + " " + vehiculos.get(i).getModelo());
         }
         
-    }
-
-    
+    }   
 }

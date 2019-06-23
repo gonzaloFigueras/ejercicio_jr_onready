@@ -2,12 +2,9 @@ package ejercicio_jr;
 
 public abstract class Vehiculo implements Comparable<Vehiculo> {
     
-   
-
-    @Override
     public String toString() {
         return "Marca: " + marca + " // Modelo: " + modelo + " // "; 
-    }
+        }
 
     private String marca;
     private String modelo;

@@ -6,8 +6,6 @@ public class Moto extends Vehiculo{
     public String toString() {
         return super.toString() + "Cilindrada: " + cilindrada + " // ";
     }
-    
-    
 
     private String cilindrada;
       

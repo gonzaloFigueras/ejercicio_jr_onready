@@ -4,8 +4,10 @@ public class OnReady {
 
     public static void main(String[] args) {
       
-        Concesionaria onReady = new Concesionaria();
-      
+       Concesionaria onReady = new Concesionaria();
+       
+       onReady.ingresarNuevoVehiculo();
+       
         onReady.listar();
         onReady.mostrar();
         
@@ -19,6 +21,8 @@ public class OnReady {
    
        
         onReady.mostrarOrdenado();
+        
+       
   
     }
     

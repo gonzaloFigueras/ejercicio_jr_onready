@@ -2,6 +2,8 @@ package ejercicio_jr;
 
 import java.util.ArrayList;
 import java.text.DecimalFormat;
+import java.util.Collections;
+import java.util.Scanner;
 public class Concesionaria implements Interfaz {
     
     DecimalFormat formateador = new DecimalFormat("####.##");
@@ -96,12 +98,72 @@ public class Concesionaria implements Interfaz {
     }
    
     public void mostrarOrdenado() {
+        
+          Collections.sort(vehiculos);
+          int i;
+        
         System.out.println("Vehiculos ordenados por precio de Mayor a Menor: ");
         
-        for (int i = 0; i < vehiculos.size(); i++) {
+        for (i = 0; i < vehiculos.size(); i++) {
             
             System.out.println(vehiculos.get(i).getMarca() + " " + vehiculos.get(i).getModelo());
         }
         
     }   
+    
+    public void cosasEnComun(){
+        System.out.println("Ingrese la marca");
+        
+        
+        
+    }
+    
+    public void ingresarNuevoVehiculo(){
+        
+        String tipo;
+        Scanner sn = new Scanner(System.in);
+        
+    
+        System.out.println("Ingrese el tipo de Vehiculo (Auto/Moto): ");
+        tipo = sn.nextLine();
+        if ("auto".equals(tipo.toLowerCase())){
+           Auto coche2 = new Auto();
+           System.out.println("Ingrese la Marca: ");
+           coche2.setMarca(sn.nextLine());
+           System.out.println("Ingrese el Modelo: ");
+           coche2.setModelo(sn.nextLine());
+            System.out.println("Ingrese la cantidad de puertas: ");
+           coche2.setPuertas(sn.nextLine());
+           System.out.println("Ingrese el Precio: ");
+           coche2.setPrecio(sn.nextDouble());
+          
+            System.out.println("llego");
+            
+           vehiculos.add(coche2);
+           
+            
+            
+        }else {
+            
+             Moto moto2 = new Moto();
+           System.out.println("Ingrese la Marca: ");
+           moto2.setMarca(sn.nextLine());
+           System.out.println("Ingrese el Modelo: ");
+           moto2.setModelo(sn.nextLine());
+            System.out.println("Ingrese la cilindrada: ");
+           moto2.setCilindrada(sn.nextLine());
+           System.out.println("Ingrese el Precio: ");
+           moto2.setPrecio(sn.nextDouble());
+        
+           vehiculos.add(moto2);
+        }
+            String seguir;
+            System.out.println("Desea ingresar otro producto?");
+            sn.nextLine();
+            seguir = sn.nextLine();
+            if("si".equals(seguir)){
+                ingresarNuevoVehiculo();
+            }
+                
+    }
 }

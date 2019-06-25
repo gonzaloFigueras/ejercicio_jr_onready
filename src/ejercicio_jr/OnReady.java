@@ -6,8 +6,6 @@ public class OnReady {
       
        Concesionaria onReady = new Concesionaria();
        
-       //onReady.ingresarNuevoVehiculo();
-       
         onReady.listar();
         onReady.mostrar();
         
